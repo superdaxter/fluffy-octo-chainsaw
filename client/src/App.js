@@ -8,18 +8,26 @@ import Navbar from "./components/navbar";
 import Landing from "./components/landing";
 import Edit from "./components/edit";
 import Create from "./components/create";
- 
+import Authenticate from "./components/authenticate";
+
 const App = () => {
- return (
-   <div>
-     <Navbar />
-     <Routes>
-       <Route exact path="/" element={<Landing />} />
-       <Route path="/edit/:id" element={<Edit />} />
-       <Route path="/create" element={<Create />} />
-     </Routes>
-   </div>
- );
+  let auth = false
+  if(auth === false) {
+    return (
+    <Authenticate />
+    );
+  } else {
+    return (
+      <div>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<Landing />} />
+          <Route path="/edit/:id" element={<Edit />} />
+          <Route path="/create" element={<Create />} />
+        </Routes>
+      </div>
+    );
+  }
 };
  
 export default App;
