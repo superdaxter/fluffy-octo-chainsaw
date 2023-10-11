@@ -1,6 +1,53 @@
 import React, { useEffect, useState } from "react";
+import Founders from "../assets/founders.png";
+import Catalogue from "../assets/catalogue.png";
 import { Link } from "react-router-dom";
+
+import "bootstrap/dist/css/bootstrap.css";
  
+export default function Landing() {
+ 
+ // This following section will display the table with the records of individuals.
+ return (
+   <div>
+    <div class="container" >
+  <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/053.webp" class="w-100" />
+  <div class="centered" >
+    <h4>Custom headaaaaaaaaaaaaaaing</h4>
+    <p class="m-0">paragraph</p>
+  </div>
+</div>
+
+    <div className="bg-image" >
+      <img src={Catalogue} alt="Founders"></img>
+      <div class="mask d-flex justify-content-center flex-column text-center">
+        <h3 >Choose the skills that YOU want to learn!</h3>
+        <button>
+          Browse Classes
+        </button>
+      </div>
+      
+    </div>
+     
+    <div className="d-flex flex-row center">
+      <img src={Founders} alt="Founders"></img>
+      <div>
+        <h4>At Teecha</h4>
+        <p>Education is at the heart of what we stand for—that’s why we only partner with teachers that pledge to use environmentally-friendly teaching methods. 
+
+        </p>
+        <button>
+          Read our story
+        </button>
+      </div>
+      
+    </div>
+
+   </div>
+ );
+}
+
+/*
 const Record = (props) => (
  <tr>
    <td>{props.record.name}</td>
@@ -18,11 +65,13 @@ const Record = (props) => (
    </td>
  </tr>
 );
+
  
-export default function RecordList() {
+export default function Landing() {
  const [records, setRecords] = useState([]);
  
  // This method fetches the records from the database.
+ 
  useEffect(() => {
    async function getRecords() {
      const response = await fetch(`http://localhost:5000/record/`);
@@ -64,12 +113,10 @@ export default function RecordList() {
      );
    });
  }
- 
- // This following section will display the table with the records of individuals.
- return (
-   <div>
-     <h3>Record List</h3>
-     <table className="table table-striped" style={{ marginTop: 20 }}>
+ */
+
+/*
+<table className="table table-striped" style={{ marginTop: 20 }}>
        <thead>
          <tr>
            <th>Name</th>
@@ -80,6 +127,4 @@ export default function RecordList() {
        </thead>
        <tbody>{recordList()}</tbody>
      </table>
-   </div>
- );
-}
+     */
