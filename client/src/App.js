@@ -9,7 +9,7 @@ import RecordList from "./components/recordList";
 import Edit from "./components/edit";
 import Create from "./components/create";
 import Authenticate from "./components/authenticate";
- 
+
 const App = () => {
   let auth = false
   if(auth === false) {

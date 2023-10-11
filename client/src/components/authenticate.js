@@ -1,12 +1,16 @@
 import React from 'react'
+import '../style.css'
 
 export default function authenticate() {
   return (
     <>
-        <p>Username:</p>
-        <input/>
-        <p>Password:</p>
-        <input/>
+    <div className='center'>
+      <p>Username:</p>
+      <input/>
+      <p>Password:</p>
+      <input/>
+      <button>BYPASS LOGIN</button>
+    </div>
     </>
   )
 }
